@@ -508,21 +508,6 @@ p.scroll-top {
 }
 @media screen and (max-width:999px) {
 
-    .trp-language-switcher-container {
-        font-size: smaller; /* Adjust size to match other menu items */
-        color: inherit; /* Inherit text color from parent */
-    }
-    
-    .trp-ls-disabled-language {
-        pointer-events: none; /* Disable interaction */
-        color: grey; /* Dim the color for disabled state */
-    }
-    
-    .wp-block-navigation-item__content:hover {
-        text-decoration: none; /* Remove underline on hover for all links */
-        
-    }
-
     .wp-block-navigation__responsive-container,
     .wp-block-navigation__responsive-container .wp-block-navigation__responsive-container-content{
         display: none;
