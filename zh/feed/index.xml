@@ -8,21 +8,21 @@
 	>
 
 <channel>
-	<title>InSpire</title>
+	<title>InSpire Learner Center</title>
 	<atom:link href="/zh/feed/" rel="self" type="application/rss+xml" />
 	<link>/zh</link>
 	<description></description>
-	<lastbuilddate></lastbuilddate>
+	<lastbuilddate>Wed, 05 Jun 2024 19:32:10 +0000</lastbuilddate>
 	<language>zh-CN</language>
 	<sy:updateperiod>
 	hourly	</sy:updateperiod>
 	<sy:updatefrequency>
 	1	</sy:updatefrequency>
-	<generator>https://wordpress.org/?v=6.5.3</generator>
+	<generator>https://wordpress.org/?v=6.5.4</generator>
 
 <image>
 	<url>/wp-content/uploads/2024/06/danlogo1.png</url>
-	<title>InSpire</title>
+	<title>InSpire Learner Center</title>
 	<link>/zh</link>
 	<width>32</width>
 	<height>32</height>
