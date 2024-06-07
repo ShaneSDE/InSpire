@@ -5,8 +5,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="max-image-preview:large">
 <title>Pay Deposit &#8211; InSpire Learner Center</title>
-<link rel="dns-prefetch" href="//js.stripe.com">
-<link rel="dns-prefetch" href="//checkout.stripe.com">
 <link rel="alternate" type="application/rss+xml" title="InSpire Learner Center &raquo; Feed" href="/feed/">
 <link rel="alternate" type="application/rss+xml" title="InSpire Learner Center &raquo; Comments Feed" href="/comments/feed/">
 <script>
@@ -77,9 +75,6 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 			width: auto;
 			z-index: 100000;
 		}</style>
-<link rel="stylesheet" id="contact-form-7-css" href="/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.9.5" media="all">
-<link rel="stylesheet" id="stripe-checkout-button-css" href="https://checkout.stripe.com/v3/checkout/button.css" media="all">
-<link rel="stylesheet" id="simpay-public-css" href="/wp-content/plugins/stripe/includes/core/assets/css/simpay-public.min.css?ver=4.10.0" media="all">
 <link rel="stylesheet" id="trp-language-switcher-style-css" href="/wp-content/plugins/translatepress-multilingual/assets/css/trp-language-switcher.css?ver=2.7.6" media="all">
 <link rel="stylesheet" id="educational-blocks-basic-style-css" href="/wp-content/themes/educational-blocks/style.css?ver=6.5.4" media="all">
 <link rel="stylesheet" id="educational-blocks-animate-css-css" href="/wp-content/themes/educational-blocks/assets/css/animate.css?ver=6.5.4" media="all">
@@ -95,7 +90,6 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 <link rel="shortlink" href="/?p=430">
 <link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=%2Fpay%2F">
 <link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=%2Fpay%2F#038;format=xml">
-<meta name="viewport" content="width=device-width, minimum-scale=1">
 <link rel="alternate" hreflang="en-US" href="/pay/">
 <link rel="alternate" hreflang="zh-CN" href="/zh/pay/">
 <link rel="alternate" hreflang="en" href="/pay/">
@@ -211,13 +205,11 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 
 
 
-
-
 <div style="text-align: center;">
     <script async src="https://js.stripe.com/v3/buy-button.js"></script>
 
-    <stripe-buy-button buy-button-id="buy_btn_1POrX8LMRaf63EwJ1WT71icl" publishable-key="pk_test_51POqAzLMRaf63EwJXmPoYRrYH0rOV7p6pW33yboDjvnY4GIwnAEaNvfl7AKrcd8LPqEwCltzg9zZqw81bXcmAW52002GKGx8A7">
-    </stripe-buy-button>
+<stripe-buy-button buy-button-id="buy_btn_1PP2AqLMRaf63EwJ0Zc6dBTj" publishable-key="pk_live_51POqAzLMRaf63EwJjyX1tfLPHVUGsHN3DiUDPlfR2UgU2VSVE7bltIEyeYFCu1rfuMiTzgyKPEnhioB2wWnXvf8h00JZxVvjJk">
+</stripe-buy-button>
 </div>
 </div></div>
 </div>
@@ -339,31 +331,6 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 		// Inject the skip link.
 		sibling.parentElement.insertBefore( skipLink, sibling );
 	}() );</script>
-<script src="/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=5.9.5" id="swv-js"></script>
-<script id="contact-form-7-js-extra">var wpcf7 = {"api":{"root":"\/wp-json\/","namespace":"contact-form-7\/v1"}};</script>
-<script src="/wp-content/plugins/contact-form-7/includes/js/index.js?ver=5.9.5" id="contact-form-7-js"></script>
-<script src="https://js.stripe.com/v3/" id="sandhills-stripe-js-v3-js"></script>
-<script src="/wp-content/plugins/stripe/includes/core/assets/js/vendor/accounting.min.js?ver=4.10.0" id="simpay-accounting-js"></script>
-<script src="/wp-includes/js/dist/vendor/wp-polyfill-inert.min.js?ver=3.1.2" id="wp-polyfill-inert-js"></script>
-<script src="/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.14.0" id="regenerator-runtime-js"></script>
-<script src="/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0" id="wp-polyfill-js"></script>
-<script src="/wp-includes/js/dist/dom-ready.min.js?ver=f77871ff7694fffea381" id="wp-dom-ready-js"></script>
-<script src="/wp-includes/js/dist/hooks.min.js?ver=2810c76e705dd1a53b18" id="wp-hooks-js"></script>
-<script src="/wp-includes/js/dist/i18n.min.js?ver=5e580eb46a90c2b997e6" id="wp-i18n-js"></script>
-<script id="wp-i18n-js-after">
-wp.i18n.setLocaleData( { 'text directionltr': [ 'ltr' ] } );
-</script>
-<script src="/wp-includes/js/dist/a11y.min.js?ver=d90eebea464f6c09bfd5" id="wp-a11y-js"></script>
-<script src="/wp-includes/js/dist/url.min.js?ver=421139b01f33e5b327d8" id="wp-url-js"></script>
-<script src="/wp-includes/js/dist/api-fetch.min.js?ver=4c185334c5ec26e149cc" id="wp-api-fetch-js"></script>
-<script id="wp-api-fetch-js-after">wp.apiFetch.use( wp.apiFetch.createRootURLMiddleware( "/wp-json/" ) );
-wp.apiFetch.nonceMiddleware = wp.apiFetch.createNonceMiddleware( "a400d05a28" );
-wp.apiFetch.use( wp.apiFetch.nonceMiddleware );
-wp.apiFetch.use( wp.apiFetch.mediaUploadMiddleware );
-wp.apiFetch.nonceEndpoint = "/wp-admin/admin-ajax.php?action=rest-nonce";</script>
-<script id="simpay-public-js-extra">var simplePayForms = [];
-var simplePayForms = [];</script>
-<script src="/wp-content/plugins/stripe/includes/core/assets/js/dist/simpay-public-upe.js?ver=4.10.0" id="simpay-public-js"></script>
 <script src="/wp-content/themes/educational-blocks/assets/js/script.js?ver=1.0.0" id="educational-blocks-main-script-js"></script>
 </body>
 </html>
