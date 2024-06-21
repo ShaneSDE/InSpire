@@ -281,50 +281,71 @@ button[type="submit"]:hover {
         <div class="time-options">
             <label><input type="checkbox" id="monday" name="preferred_days" value="Monday"> 周一</label>
             <div id="monday-slots">
-                <input type="time" name="monday_start[]" step="1800"> to
-                <input type="time" name="monday_end[]" step="1800">
+                <div>
+                    <input type="time" name="monday_start[]" step="1800"> to
+                    <input type="time" name="monday_end[]" step="1800">
+                    <button type="button" onclick="removeTimeSlot(this)">删除</button>
+                </div>
             </div>
             <button type="button" onclick="addTimeSlot('monday')">增加时间段</button>
             <br>
             <label><input type="checkbox" id="tuesday" name="preferred_days" value="Tuesday"> 周二</label>
             <div id="tuesday-slots">
-                <input type="time" name="tuesday_start[]" step="1800"> to
-                <input type="time" name="tuesday_end[]" step="1800">
+                <div>
+                    <input type="time" name="tuesday_start[]" step="1800"> to
+                    <input type="time" name="tuesday_end[]" step="1800">
+                    <button type="button" onclick="removeTimeSlot(this)">删除</button>
+                </div>
             </div>
             <button type="button" onclick="addTimeSlot('tuesday')">增加时间段</button>
             <br>
             <label><input type="checkbox" id="wednesday" name="preferred_days" value="Wednesday"> 周三</label>
             <div id="wednesday-slots">
-                <input type="time" name="wednesday_start[]" step="1800"> to
-                <input type="time" name="wednesday_end[]" step="1800">
+                <div>
+                    <input type="time" name="wednesday_start[]" step="1800"> to
+                    <input type="time" name="wednesday_end[]" step="1800">
+                    <button type="button" onclick="removeTimeSlot(this)">删除</button>
+                </div>
             </div>
             <button type="button" onclick="addTimeSlot('wednesday')">增加时间段</button>
             <br>
             <label><input type="checkbox" id="thursday" name="preferred_days" value="Thursday"> 周四</label>
             <div id="thursday-slots">
-                <input type="time" name="thursday_start[]" step="1800"> to
-                <input type="time" name="thursday_end[]" step="1800">
+                <div>
+                    <input type="time" name="thursday_start[]" step="1800"> to
+                    <input type="time" name="thursday_end[]" step="1800">
+                    <button type="button" onclick="removeTimeSlot(this)">删除</button>
+                </div>
             </div>
             <button type="button" onclick="addTimeSlot('thursday')">增加时间段</button>
             <br>
             <label><input type="checkbox" id="friday" name="preferred_days" value="Friday"> 周五</label>
             <div id="friday-slots">
-                <input type="time" name="friday_start[]" step="1800"> to
-                <input type="time" name="friday_end[]" step="1800">
+                <div>
+                    <input type="time" name="friday_start[]" step="1800"> to
+                    <input type="time" name="friday_end[]" step="1800">
+                    <button type="button" onclick="removeTimeSlot(this)">删除</button>
+                </div>
             </div>
             <button type="button" onclick="addTimeSlot('friday')">增加时间段</button>
             <br>
             <label><input type="checkbox" id="saturday" name="preferred_days" value="Saturday"> 周六</label>
             <div id="saturday-slots">
-                <input type="time" name="saturday_start[]" step="1800"> to
-                <input type="time" name="saturday_end[]" step="1800">
+                <div>
+                    <input type="time" name="saturday_start[]" step="1800"> to
+                    <input type="time" name="saturday_end[]" step="1800">
+                    <button type="button" onclick="removeTimeSlot(this)">删除</button>
+                </div>
             </div>
             <button type="button" onclick="addTimeSlot('saturday')">增加时间段</button>
             <br>
             <label><input type="checkbox" id="sunday" name="preferred_days" value="Sunday"> 周日</label>
             <div id="sunday-slots">
-                <input type="time" name="sunday_start[]" step="1800"> to
-                <input type="time" name="sunday_end[]" step="1800">
+                <div>
+                    <input type="time" name="sunday_start[]" step="1800"> to
+                    <input type="time" name="sunday_end[]" step="1800">
+                    <button type="button" onclick="removeTimeSlot(this)">删除</button>
+                </div>
             </div>
             <button type="button" onclick="addTimeSlot('sunday')">增加时间段</button>
         </div>
@@ -350,11 +371,16 @@ button[type="submit"]:hover {
     function addTimeSlot(day) {
         const daySlots = document.getElementById(day + '-slots');
         const newSlot = document.createElement('div');
-        newSlot.innerHTML = `<input type="time" name="${day}_start[]" step="1800"> to <input type="time" name="${day}_end[]" step="1800"><br>`;
+        newSlot.innerHTML = `<input type="time" name="${day}_start[]" step="1800"> to <input type="time" name="${day}_end[]" step="1800"> <button type="button" onclick="removeTimeSlot(this)">删除</button><br>`;
         daySlots.appendChild(newSlot);
+    }
+
+    function removeTimeSlot(button) {
+        button.parentElement.remove();
     }
 </script>
 </div>
+
 </div></div>
 </div>
 </main>
