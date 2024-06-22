@@ -372,7 +372,7 @@ button[type="submit"]:hover {
     function addTimeSlot(day) {
         const daySlots = document.getElementById(day + '-slots');
         const newSlot = document.createElement('div');
-        newSlot.innerHTML = `<input type="time" name="${day}_start[]" step="1800"> to <input type="time" name="${day}_end[]" step="1800"> <button type="button" class="btn" onclick="removeTimeSlot(this)">删除</button><br>`;
+        newSlot.innerHTML = `<input type="time" name="${day}_start[]" step="60"> to <input type="time" name="${day}_end[]" step="60"> <button type="button" class="btn" onclick="removeTimeSlot(this)">删除</button><br>`;
         daySlots.appendChild(newSlot);
     }
 
