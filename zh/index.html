@@ -114,6 +114,39 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 @font-face{font-family:"Roboto Slab";font-style:normal;font-weight:700;font-display:fallback;src:url('/wp-content/themes/educational-blocks/assets/fonts/Roboto_Slab/static/RobotoSlab-Bold.ttf') format('truetype');}
 @font-face{font-family:"Roboto Slab";font-style:normal;font-weight:800;font-display:fallback;src:url('/wp-content/themes/educational-blocks/assets/fonts/Roboto_Slab/static/RobotoSlab-ExtraBold.ttf') format('truetype');}
 @font-face{font-family:"Roboto Slab";font-style:normal;font-weight:900;font-display:fallback;src:url('/wp-content/themes/educational-blocks/assets/fonts/Roboto Slab/static/RobotoSlab-Black.ttf') format('truetype');}</style>
+<style>
+    /* 深灰色背景和白色字体样式 */
+    .custom-button-container {
+        background-color: #444444; /* 深灰色背景 */
+        padding: 30px 0; /* 上下填充30px，左右填充0 */
+        text-align: center; /* 中心对齐 */
+        width: 100%; /* 占满一行 */
+        box-sizing: border-box; /* 确保padding不会影响宽度 */
+    }
+
+    .custom-button-container .background-text {
+        color: #FFFFFF; /* 背景文字白色 */
+        font-size: 25px; /* 调整背景区域文字的字体大小 */
+		font-weight: bold;
+        margin-bottom: 20px; /* 背景文字和按钮之间的间距 */
+    }
+
+    .custom-button {
+        color: #FFFFFF; /* 按钮文字白色 */
+        font-size: 20px; /* 调整按钮文字大小 */
+		font-weight: bold;
+        text-decoration: none; /* 移除链接下划线 */
+        background-color: transparent; /* 按钮初始透明背景 */
+        border: 2px solid #FFFFFF; /* 白色边框 */
+        padding: 10px 20px; /* 调整按钮大小，长方形 */
+        display: inline-block; /* 使按钮显示为行内块元素 */
+        transition: background-color 0.3s; /* 悬停效果过渡时间 */
+    }
+
+    .custom-button:hover {
+        background-color: #fac505; /* 悬停后深色背景 */
+    }
+    </style>
 <link rel="icon" href="/wp-content/uploads/2024/06/danlogo1.png" sizes="32x32">
 <link rel="icon" href="/wp-content/uploads/2024/06/danlogo1.png" sizes="192x192">
 <link rel="apple-touch-icon" href="/wp-content/uploads/2024/06/danlogo1.png">
@@ -555,18 +588,27 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 
 
 
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:33.34%">
+<!-- <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:33.34%">
 <div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-2 wp-block-buttons-is-layout-flex">
 <div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="#con" style="border-style:none;border-width:0px;box-shadow:var(--wp--preset--shadow--natural)">预约免费学习诊断</a></div>
 </div>
-</div>
+</div> -->
 
 
 
 <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:33.33%"></div>
 </div>
 
-
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow custom-button-container">
+	<div class="background-text">预约免费学习诊断!</div>
+	<div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-2 wp-block-buttons-is-layout-flex">
+		<div class="wp-block-button">
+			<a class="custom-button wp-element-button" href="#con">
+				联系预约
+			</a>
+		</div>
+	</div>
+</div>
 
 <div style="height:53px" aria-hidden="true" class="wp-block-spacer"></div>
 
