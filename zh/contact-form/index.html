@@ -361,10 +361,10 @@ button[type="submit"]:hover {
         input.addEventListener('input', function() {
             const value = this.value;
             const minutes = value.split(':')[1];
-            if (minutes !== '00' && minutes !== '30') {
-                const roundedMinutes = Math.floor(minutes / 30) * 30;
-                this.value = `${value.split(':')[0]}:${roundedMinutes < 10 ? '0' : ''}${roundedMinutes}`;
-            }
+            // if (minutes !== '00' && minutes !== '30') {
+            //     const roundedMinutes = Math.floor(minutes / 30) * 30;
+            //     this.value = `${value.split(':')[0]}:${roundedMinutes < 10 ? '0' : ''}${roundedMinutes}`;
+            // }
         });
     });
 
