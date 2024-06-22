@@ -280,40 +280,83 @@ button[type="submit"]:hover {
         <label>Preferred Class Times:</label>
         <div class="time-options">
             <label><input type="checkbox" id="monday" name="preferred_days" value="Monday"> Monday:</label>
-            <input type="time" id="monday-start" name="monday_start" step="1800"> to
-            <input type="time" id="monday-end" name="monday_end" step="1800">
+            <div id="monday-slots">
+                <div>
+                    <input type="time" name="monday_start[]" step="1800"> to
+                    <input type="time" name="monday_end[]" step="1800">
+                    <button type="button" class="btn" onclick="removeTimeSlot(this)">Delete</button>
+                </div>
+            </div>
+            <button type="button" class="btn" onclick="addTimeSlot('monday')">Add Time Slot</button>
             <br>
             <label><input type="checkbox" id="tuesday" name="preferred_days" value="Tuesday"> Tuesday:</label>
-            <input type="time" id="tuesday-start" name="tuesday_start" step="1800"> to
-            <input type="time" id="tuesday-end" name="tuesday_end" step="1800">
+            <div id="tuesday-slots">
+                <div>
+                    <input type="time" name="tuesday_start[]" step="1800"> to
+                    <input type="time" name="tuesday_end[]" step="1800">
+                    <button type="button" class="btn" onclick="removeTimeSlot(this)">Delete</button>
+                </div>
+            </div>
+            <button type="button" class="btn" onclick="addTimeSlot('tuesday')">Add Time Slot</button>
             <br>
             <label><input type="checkbox" id="wednesday" name="preferred_days" value="Wednesday"> Wednesday:</label>
-            <input type="time" id="wednesday-start" name="wednesday_start" step="1800"> to
-            <input type="time" id="wednesday-end" name="wednesday_end" step="1800">
+            <div id="wednesday-slots">
+                <div>
+                    <input type="time" name="wednesday_start[]" step="1800"> to
+                    <input type="time" name="wednesday_end[]" step="1800">
+                    <button type="button" class="btn" onclick="removeTimeSlot(this)">Delete</button>
+                </div>
+            </div>
+            <button type="button" class="btn" onclick="addTimeSlot('wednesday')">Add Time Slot</button>
             <br>
             <label><input type="checkbox" id="thursday" name="preferred_days" value="Thursday"> Thursday:</label>
-            <input type="time" id="thursday-start" name="thursday_start" step="1800"> to
-            <input type="time" id="thursday-end" name="thursday_end" step="1800">
+            <div id="thursday-slots">
+                <div>
+                    <input type="time" name="thursday_start[]" step="1800"> to
+                    <input type="time" name="thursday_end[]" step="1800">
+                    <button type="button" class="btn" onclick="removeTimeSlot(this)">Delete</button>
+                </div>
+            </div>
+            <button type="button" class="btn" onclick="addTimeSlot('thursday')">Add Time Slot</button>
             <br>
             <label><input type="checkbox" id="friday" name="preferred_days" value="Friday"> Friday:</label>
-            <input type="time" id="friday-start" name="friday_start" step="1800"> to
-            <input type="time" id="friday-end" name="friday_end" step="1800">
+            <div id="friday-slots">
+                <div>
+                    <input type="time" name="friday_start[]" step="1800"> to
+                    <input type="time" name="friday_end[]" step="1800">
+                    <button type="button" class="btn" onclick="removeTimeSlot(this)">Delete</button>
+                </div>
+            </div>
+            <button type="button" class="btn" onclick="addTimeSlot('friday')">Add Time Slot</button>
             <br>
             <label><input type="checkbox" id="saturday" name="preferred_days" value="Saturday"> Saturday:</label>
-            <input type="time" id="saturday-start" name="saturday_start" step="1800"> to
-            <input type="time" id="saturday-end" name="saturday_end" step="1800">
+            <div id="saturday-slots">
+                <div>
+                    <input type="time" name="saturday_start[]" step="1800"> to
+                    <input type="time" name="saturday_end[]" step="1800">
+                    <button type="button" class="btn" onclick="removeTimeSlot(this)">Delete</button>
+                </div>
+            </div>
+            <button type="button" class="btn" onclick="addTimeSlot('saturday')">Add Time Slot</button>
             <br>
             <label><input type="checkbox" id="sunday" name="preferred_days" value="Sunday"> Sunday:</label>
-            <input type="time" id="sunday-start" name="sunday_start" step="1800"> to
-            <input type="time" id="sunday-end" name="sunday_end" step="1800">
+            <div id="sunday-slots">
+                <div>
+                    <input type="time" name="sunday_start[]" step="1800"> to
+                    <input type="time" name="sunday_end[]" step="1800">
+                    <button type="button" class="btn" onclick="removeTimeSlot(this)">Delete</button>
+                </div>
+            </div>
+            <button type="button" class="btn" onclick="addTimeSlot('sunday')">Add Time Slot</button>
         </div>
     </div>
     <div class="form-group">
-        <button type="submit">Submit</button>
+        <button type="submit" class="btn">Submit</button>
     </div>
 </form>
 
-<script>document.querySelectorAll('input[type="time"]').forEach(input => {
+<script>
+    document.querySelectorAll('input[type="time"]').forEach(input => {
         input.addEventListener('input', function() {
             const value = this.value;
             const minutes = value.split(':')[1];
@@ -322,10 +365,37 @@ button[type="submit"]:hover {
                 this.value = `${value.split(':')[0]}:${roundedMinutes < 10 ? '0' : ''}${roundedMinutes}`;
             }
         });
-    });</script>
+    });
 
+    function addTimeSlot(day) {
+        const daySlots = document.getElementById(day + '-slots');
+        const newSlot = document.createElement('div');
+        newSlot.innerHTML = `<input type="time" name="${day}_start[]" step="1800"> to <input type="time" name="${day}_end[]" step="1800"> <button type="button" class="btn" onclick="removeTimeSlot(this)">Delete</button><br>`;
+        daySlots.appendChild(newSlot);
+    }
 
+    function removeTimeSlot(button) {
+        button.parentElement.remove();
+    }
+</script>
+
+<style>
+    .btn {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        margin: 5px 0;
+        border: none;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+
+    .btn:hover {
+        background-color: #45a049;
+    }
+</style>
 </div>
+
 </div></div>
 </div>
 </main>
