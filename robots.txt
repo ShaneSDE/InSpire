@@ -1,4 +1,4 @@
 User-agent: *
-Disallow:
+Disallow: /wp-content/uploads/2024/05/Weixin-Image_20240507183813-7.jpg
 
 Sitemap: https://inspiredu.ca/sitemap.xml
