@@ -1,7 +1,4 @@
 User-agent: *
-Disallow: /private/
-
-User-agent: Googlebot
-Allow: /
+Disallow:
 
 Sitemap: https://inspiredu.ca/sitemap.xml
